@@ -1,0 +1,61 @@
+style.css
+
+.box1 {
+    font-size: 120%;
+    font-weight: normal;
+    background: url('sky.jpg') no-repeat;
+    background-color: yellow;
+    padding: 20px;
+}
+
+.box2 {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    background: url('sky.jpg') no-repeat;
+    background-color: yellow;
+    padding: 20px;
+}
+
+/* CSS 2 */
+.css2 {
+    text-indent: 2cm;
+    font-family: Courier, monospace;
+    font-style: italic;
+    text-transform: uppercase;
+    color: green;
+    font-size: 24px;
+}
+.styled-link:link {
+    text-decoration: none;
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.styled-link:hover {
+    text-decoration: underline;
+    color: blue;
+}
+
+/* CSS 4 - Use nth-child to style alternating rows */
+table {
+    width: 50%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-top: 20px;
+}
+
+td {
+    padding: 10px;
+}
+
+/* Even rows */
+tr:nth-child(even) {
+    background-color: yellow;
+}
+
+/* Odd rows */
+tr:nth-child(odd) {
+    background-color: green;
+    color: white;
+}
