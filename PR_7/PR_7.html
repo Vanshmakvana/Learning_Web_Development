@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Programs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+    }
+    .container {
+      background: #fff;
+      padding: 15px;
+      margin: 15px auto;
+      width: 350px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    }
+    h3 {
+      margin-top: 0;
+      color: #333;
+    }
+    input {
+      width: 90%;
+      padding: 8px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 8px 12px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #45a049;
+    }
+    p {
+      font-weight: bold;
+      color: #222;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1) Check number less than or greater than 50 -->
+  <div class="container">
+    <h3>1) Check Number &lt; 50 or &gt; 50</h3>
+    <input type="number" id="num1" placeholder="Enter a number">
+    <button onclick="checkNumber()">Check</button>
+    <p id="result1"></p>
+  </div>
+
+  <!-- 2) Addition of two numbers -->
+  <div class="container">
+    <h3>2) Add Two Numbers</h3>
+    <input type="number" id="val1" placeholder="Enter first number"><br>
+    <input type="number" id="val2" placeholder="Enter second number"><br>
+    <button onclick="addNumbers()">Add</button>
+    <p id="result2"></p>
+  </div>
+
+  <!-- 3) Check Even or Odd -->
+  <div class="container">
+    <h3>3) Check Even or Odd</h3>
+    <input type="number" id="num2" placeholder="Enter a number">
+    <button onclick="checkEvenOdd()">Check</button>
+    <p id="result3"></p>
+  </div>
+
+  <script>
+    // 1) Less than or Greater than 50
+    function checkNumber() {
+      let num = document.getElementById("num1").value;
+      let result = document.getElementById("result1");
+      if (num === "") {
+        result.innerText = "Please enter a number!";
+      } else if (num < 50) {
+        result.innerText = num + " is less than 50.";
+      } else if (num > 50) {
+        result.innerText = num + " is greater than 50.";
+      } else {
+        result.innerText = "Number is exactly 50.";
+      }
+    }
+
+    // 2) Addition of two numbers
+    function addNumbers() {
+      let a = parseFloat(document.getElementById("val1").value);
+      let b = parseFloat(document.getElementById("val2").value);
+      let result = document.getElementById("result2");
+
+      if (isNaN(a) || isNaN(b)) {
+        result.innerText = "Please enter both numbers!";
+      } else {
+        result.innerText = "Sum = " + (a + b);
+      }
+    }
+
+    // 3) Even or Odd check
+    function checkEvenOdd() {
+      let num = document.getElementById("num2").value;
+      let result = document.getElementById("result3");
+      if (num === "") {
+        result.innerText = "Please enter a number!";
+      } else if (num % 2 === 0) {
+        result.innerText = num + " is Even.";
+      } else {
+        result.innerText = num + " is Odd.";
+      }
+    }
+  </script>
+</body>
+</html>
