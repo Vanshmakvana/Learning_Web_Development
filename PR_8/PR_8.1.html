@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Events</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    h1 {
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Heading with mouse events -->
+  <h1 id="mainHeading"
+      onmouseover="this.style.color='yellow'"
+      onmouseout="this.style.color='black'">
+    Hover Over Daddy!
+  </h1>
+
+  <!-- Buttons -->
+  <button onclick="showTime()">Time</button>
+  <button onclick="changeBG('red')">Red</button>
+  <button onclick="changeBG('green')">Green</button>
+  <button onclick="changeBG('')">No Fill</button>
+
+  <!-- Time display -->
+  <p id="timeDisplay"></p>
+
+  <!-- JavaScript -->
+  <script>
+    function showTime() {
+      const now = new Date();
+      document.getElementById("timeDisplay").innerText = now.toString();
+    }
+
+    function changeBG(color) {
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+
+</body>
+</html>
